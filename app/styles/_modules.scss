@@ -25,8 +25,10 @@
     height: em(212);
     padding: em(12) 0 0 em(20);
 
+    background: url(../images/photo-frame.png) no-repeat;
+
     @include breakpoint(479px) {
-      padding: em(12) 0 0 em(63);
+      margin: em(12) 0 0 em(41);
     }
   }
 
@@ -36,5 +38,64 @@
     color: $profile-text-color;
     font-weight: 400;
     line-height: 20px;
+
+    @include breakpoint(479px) {
+      text-align: center;
+    }
+  }
+
+  .personal-info {
+    float: left;
+    margin-top: em(30);
+    width: em(310);
+    min-height: em(230);
+    margin-left: em(10);
+    background: url(../images/vertical-separator.png) no-repeat left top;
+    padding: em(20) 0 0 em(20);
+
+    @include breakpoint(959px) {
+      width: em(280);
+      margin-right: em(10);
+      background: none;
+    }
+
+    @include breakpoint(767px) {
+      margin-top: 0;
+      display: block;
+      width: em(420);
+    }
+
+    @include breakpoint(479px) {
+      width: em(280);
+      margin-left: em(10);
+      min-height: em(220);
+      padding-left: 0;
+    }
+  }
+
+  .personal-info li {
+    font-size: 14px;
+    margin-bottom: em(10);
+    overflow: hidden;
+
+    @include breakpoint(479px) {
+      font-size: 13px;
+    }
+  }
+
+  .personal-info label {
+    color: darken($profile-text-color, 10);
+    float: left;
+    padding: 4px 7px;
+    font-weight: 600;
+    @include border-radius(3);
+  }
+
+  .personal-info span {
+    float: right;
+    width: em(220);
+    padding-top: 4px;
+    font-weight: 300;
+    color: $profile-text-color;
   }
 }
