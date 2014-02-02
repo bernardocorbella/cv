@@ -1,0 +1,21 @@
+#profile {
+  background-color: $main-color;
+
+  @include clearfix;
+
+  .about {
+    width: em(490);
+    float: left;
+    margin: em(30) 0 0 em(20);
+
+    @include breakpoint(767px) {
+      width: em(420);
+      display: block;
+    }
+
+    @include breakpoint(479px) {
+      width: em(280);
+      margin: em(10) 0 em(15) em(10);
+    }
+  }
+}

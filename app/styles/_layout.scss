@@ -1,3 +1,23 @@
-#container {
+#wrapper {
   margin: 0 auto;
+  width: em(860);
+  margin-bottom: em(20);
+  margin-top: em(30);
+
+  @include breakpoint(959px) {
+    width: em(750);
+  }
+
+  @include breakpoint(767px) {
+    width: em(470);
+  }
+
+  @include breakpoint(467px) {
+    width: em(300);
+    margin-top: em(10);
+  }
+}
+
+#container {
+  @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset)
 }

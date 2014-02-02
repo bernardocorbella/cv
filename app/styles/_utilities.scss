@@ -1,3 +1,9 @@
 @function em($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}em
+  @return #{$pixels/$context}em;
+}
+
+@mixin breakpoint($max) {
+  @media only screen and (max-width: $max) {
+    @content;
+  }
 }
